@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <div>
+    <textarea id="text"></textarea>
+    <button type="button" name="button" onclick="calc()">Посчитать</button>
+  </div>
+</body>
+<script type="text/javascript">
+  function calc(){
+    var str = document.getElementById("text").value;  //забираем инфу с текст ареи
+    alert("Количество символов = " + str.length); //количество символов в строке
+    str= str.replace(/\s+/g, ' ').trim(); //убираем лишние пробелы
+    if (str =="") return;  //если строка пуста или состоит только из пробелов ниче не делаем
+    alert("Количество слов = " str.split(/\s+\b/).length);  //считаем количество слов в строке
+  }
+</script>
+</html>
